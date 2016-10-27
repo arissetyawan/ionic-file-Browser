@@ -1,0 +1,8 @@
+/* Empty. Add your own CSS if you like */
+
+.tabs-top > .tabs, .tabs.tabs-top {
+  top: 0;
+}
+ion-content.scroll-content.ionic-scroll.overflow-scroll.has-tabs-top {
+top: 50px;
+}

@@ -1,0 +1,17 @@
+<ion-view title="File Browser" hide-tabs="false">
+  <ion-content>
+    <ion-pane>
+      <div class="bar bar-header item-input-inset">
+        <input type="text" placeholder="Search" ng-model="search.name" style="width:100%; padding-left:11px;border: 1px solid gray" />
+      </div>
+      <div class="list">
+        <a class="item item-avatar item-icon-right" href="#" ng-click="getContents(file.nativeURL)" ng-repeat="file in files | filter: search | limitTo: 100">
+          <img ng-src="{{file.nativeURL}}">
+          <i ng-show="file.isDirectory" class="icon ion-folder"></i>
+          <i ng-show="file.isFile" class="icon ion-document"></i>
+          {{file.name}}
+        </a>
+      </div>
+    </ion-pane>
+  </ion-content>
+</ion-view>
